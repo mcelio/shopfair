@@ -1,0 +1,65 @@
+import React, { Component } from 'react';
+import AuthService from './AuthService';
+import './Login.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+
+class Login extends Component {
+    constructor(){
+        super();
+        this.handleChange = this.handleChange.bind(this);
+        this.handleFormSubmit = this.handleFormSubmit.bind(this);
+        this.Auth = new AuthService();
+    }
+
+    state = {
+       authenticated: false
+    }
+
+    onLoginClick = () => {
+        this.setState({ authenticated: true });
+    }
+ 
+    render() {
+        return (
+          <Form>
+            <FormGroup>
+              <Label for="exampleEmail">Email</Label>
+              <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+            </FormGroup>
+            <FormGroup>
+              <Label for="examplePassword">Password</Label>
+              <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
+            </FormGroup>       
+            <Button onClick={this.onLoginClick }>Submit</Button>
+          </Form>
+          {this.state.authenticated}
+        );
+    }
+
+    handleChange(e){
+        this.setState(
+            {
+                [e.target.name]: e.target.value
+            }
+        )
+    }
+    
+    handleFormSubmit(e){
+        e.preventDefault();      
+        this.Auth.login(this.state.username,this.state.password)
+            .then(res =>{
+               this.props.history.replace('/');
+            })
+            .catch(err =>{
+                alert(err);
+            })
+    }
+
+    componentWillMount(){
+        if(this.Auth.loggedIn())
+            this.props.history.replace('/');
+        }
+}
+
+export default Login;

@@ -1,0 +1,10 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = true
+[remote "origin"]
+	url = https://mvpcelio@bitbucket.org/mvpcelio/shopfare.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[remote "shopfare"]
+	url = https://mvpcelio@bitbucket.org/mvpcelio/shopfare.git
+	fetch = +refs/heads/*:refs/remotes/shopfare/*
