@@ -24,7 +24,7 @@ import AuthService from './AuthService';
 
 const Auth = new AuthService();
 
-class Shopfare extends React.Component {
+class Shopfair extends React.Component {
 
   constructor(props) {
     super(props);
@@ -48,7 +48,7 @@ class Shopfare extends React.Component {
       <Router>
           <div>
             <Navbar color="faded" light expand="md">
-              <NavbarBrand href="/">Shopfare</NavbarBrand>
+              <NavbarBrand href="/">Shopfair</NavbarBrand>
               <NavbarToggler onClick={this.toggle} />
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
@@ -83,7 +83,7 @@ class Shopfare extends React.Component {
   }
 }
 
-export default Shopfare;
+export default Shopfair;
 
 
 

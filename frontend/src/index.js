@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Shopfare from "./components/Shopfare";
+import Shopfair from "./components/Shopfair";
 import style from "./main.css";
 
 ReactDOM.render(
-    <Shopfare/>
+    <Shopfair/>
     , document.getElementById('app')
 );

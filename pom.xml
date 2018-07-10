@@ -4,17 +4,17 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.shopfare</groupId>
-  <artifactId>shopfare</artifactId>
+  <groupId>com.shopfair</groupId>
+  <artifactId>shopfair</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>shopfare app</name>
+  <name>shopfair app</name>
   <description>Test project to check some basic knowledge of server applicants.</description>
 
   <organization>
-    <name>Shop Fare</name>
-    <url>http://www.shopfare.com</url>
+    <name>Shop Fair</name>
+    <url>http://www.shopfair.com</url>
   </organization>
 
   <parent>

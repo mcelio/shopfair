@@ -4,7 +4,7 @@ import axios from "axios";
 export default class AuthService {
     // Initializing important variables
     constructor(domain) {
-        this.domain = domain || 'http://localhost:8080' // API server domain
+        this.domain = domain || 'http://localhost:8081' // API server domain
         this.setToken = this.setToken.bind(this)
         this.login = this.login.bind(this)        
         this.getProfile = this.getProfile.bind(this)
@@ -18,7 +18,7 @@ export default class AuthService {
         }
         return axios({
           method: "post",
-          url: "http://localhost:8080/login",
+          url: "http://localhost:8081/login",
           withCredentials: true,
           data: {"password" : password, "username" : username},
           headers
