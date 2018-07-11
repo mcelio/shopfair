@@ -52,7 +52,7 @@ class SaveStores extends Component {
         console.log(name);
         axios({
             method: "post",
-            url: "http://localhost:8080/v1/stores",
+            url: "http://localhost:8081/v1/stores",
             withCredentials: true,
             data: store,
             headers

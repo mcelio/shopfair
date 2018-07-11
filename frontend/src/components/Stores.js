@@ -29,7 +29,7 @@ class Stores extends Component {
                  "Access-Control-Allow-Credentials":"true",
                  "withCredentials" : true,
              }
-             return axios.get("http://localhost:8080/v1/stores", headers);
+             return axios.get("http://localhost:8081/v1/stores", headers);
           }
 
     componentDidMount() {
@@ -44,7 +44,7 @@ class Stores extends Component {
             "withCredentials" : true,
 
         }
-        return axios.get("http://localhost:8080/v1/stores", headers)
+        return axios.get("http://localhost:8081/v1/stores", headers)
             .then(response => {
               // create an array of contacts only with relevant data
               this.setState({
